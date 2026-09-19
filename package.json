@@ -1,0 +1,35 @@
+{
+  "name": "yasakani-jewel",
+  "version": "1.0.0",
+  "description": "AI-Native security companion. Zero-daemon, multi-layer security audit wiring for Claude Code / Cursor / GitHub Copilot.",
+  "bin": {
+    "yasakani": "bin/yasakani.js",
+    "yasakani-jewel": "bin/yasakani.js"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "templates/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "test": "node test/scan.test.js && node test/findings.test.js && node test/init-uninstall.test.js",
+    "eval": "node test/eval-fixtures.js"
+  },
+  "keywords": [
+    "security",
+    "audit",
+    "ai",
+    "claude",
+    "cursor",
+    "copilot",
+    "pre-commit",
+    "secrets",
+    "shift-left"
+  ],
+  "author": "rartaty",
+  "license": "MIT"
+}

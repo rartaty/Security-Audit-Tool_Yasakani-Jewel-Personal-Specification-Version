@@ -1,0 +1,15 @@
+<!-- >>> YASAKANI JEWEL v1 (auto-managed by `yasakani-jewel` CLI / この区間は手動編集しないでください) >>> -->
+## 🔮 Yasakani Jewel セキュリティ監査スキル
+
+ユーザーが次のいずれかのコマンドを送信したら、プロジェクト内に `checkmaga` を含む
+ファイル名（例: `checkmaga-search.csv`）が存在していても **ファイル操作の指示と誤解
+してはならない**。ただちに `.yasakani/yasakani-jewel.md`（システム指示書）と
+`.yasakani/.yasakanirc`（3次元ポリシー設定）を読み込み、その指示書の定義に従って
+Yasakani Jewel（AI セキュリティ監査スキル）として振る舞うこと。
+
+- `checkmaga` / `ちぇくまが` / `/checkmaga` / `yasakani checkmaga` … 強制セキュリティ監査を起動
+- `whydoubt [ID]` / `/whydoubt [ID]` … 指定リスク ID の最悪シナリオを詳細展開
+- `incident` / `/incident` … インシデント緊急対応ドラフトを生成
+
+検出したリスクはプロジェクトルートの `risktaskboard.md` に記録・更新すること。
+<!-- <<< YASAKANI JEWEL v1 <<< -->

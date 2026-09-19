@@ -1,0 +1,15 @@
+{
+  "name": "project-big-tester",
+  "version": "1.0.0",
+  "description": "Yasakani Jewel Security Verification Environment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "prefilter": "node yasakani-prefilter.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "lodahs": "^4.17.21"
+  },
+  "devDependencies": {}
+}

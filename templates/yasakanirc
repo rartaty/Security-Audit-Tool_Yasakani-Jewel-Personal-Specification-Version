@@ -1,0 +1,10 @@
+{
+  "DEVELOPMENT_PHASE": "design",
+  "PROJECT_SIZE": "S",
+  "ASSET_TYPE": "normal",
+  "bypass_permission": {
+    "design": false,
+    "staging": false,
+    "production": false
+  }
+}

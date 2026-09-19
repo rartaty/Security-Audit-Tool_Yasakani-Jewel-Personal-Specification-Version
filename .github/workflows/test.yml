@@ -1,0 +1,38 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x, 18.x, 20.x, 22.x]
+
+    steps:
+      - name: Checkout
+        # 指示書 §3.8 (CI/CD パイプライン完全性 / SLSA) の自己適用:
+        # サードパーティ Action はタグ/ブランチではなくコミット SHA に固定する
+        # (タグは改ざん可能。SHA は不変)。SHA は GitHub API で v4 から取得。
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        # 同上、コミット SHA に固定
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Syntax check (全 JS ファイル)
+        run: |
+          node --check bin/yasakani.js
+          node --check src/init.js
+          node --check src/scan.js
+          node --check src/uninstall.js
+          node --check src/jsonc.js
+
+      - name: Unit tests
+        run: npm test

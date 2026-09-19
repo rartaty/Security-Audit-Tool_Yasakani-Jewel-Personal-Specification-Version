@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+npm-debug.log*
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.claude/
+
+# Local runtime (init で生成される)
+.yasakani/
+
+# Build / packaging artifacts
+*.tgz
+.tmp/
+
+# 監査レポート (ローカル証跡のみ・git 管理対象外)
+checkmaga-reports/

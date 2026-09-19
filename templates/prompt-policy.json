@@ -1,0 +1,18 @@
+{
+  "public_notice": [
+    "prompts/public/**",
+    "**/prompts/public/**"
+  ],
+  "private_block": [
+    "prompts/private/**",
+    "**/prompts/private/**",
+    "private/system-prompt.md",
+    "private/**/system-prompt.md",
+    "**/private/system-prompt.md",
+    "**/private/**/system-prompt.md"
+  ],
+  "system_prompt_block": [
+    "**/*.system-prompt.md"
+  ],
+  "unknown_prompt": "block"
+}
